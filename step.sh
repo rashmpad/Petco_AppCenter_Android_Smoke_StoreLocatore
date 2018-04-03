@@ -48,8 +48,7 @@ msbuild "${SOLUTION}" /p:Configuration=Release
 
 appcenter test prepare uitest --artifacts-dir "${ARTIFACTS_DIR}" --app-path "${app_path}" --build-dir "${BUILD_DIR}" --debug --quiet
 
-
-appcenter test run uitest --app "${app_center_app}" --devices 6f2c8184 --app-path "${app_path}" --async --fixture Petco.UITests.Cart\(Android\).VerifyCartFlowSecureCheckOutForgotPasswordwithOutRepeatDelivery --test-series "master" --locale "en_US" --token "${app_center_token}" appcenter test run uitest --app "${app_center_app}" --devices "rashmi.padhi-01/apple-iphone-7-plus" --app-path "${app_path}" --async --fixture Petco.UITests.Cart\(iOS\).VerifyCartFlowSecureCheckOutForgotPasswordwithOutRepeatDelivery --test-series "master" --locale "en_US" --token "${app_center_token}" --uitest-tools-dir
+appcenter test run uitest --app "${app_center_app}" --devices 6f2c8184 --app-path "${app_path}" --async --fixture Petco.UITests.Cart\(Android\).VerifyCartFlowSecureCheckOutForgotPasswordwithOutRepeatDelivery --test-series "master" --locale "en_US" --token "${app_center_token}" --uitest-tools-dir
 #
 # --- Exit codes:
 # The exit code of your Step is very important. If you return
