@@ -34,7 +34,7 @@ echo
 # ---------------------
 # --- Main
 
-LAUNCH_TEST_DIR="${BITRISE_SOURCE_DIR}/app-center-launch-test-android"
+LAUNCH_TEST_DIR="${ANDROID_PROJECT_FOLDER}"
 OUTPUT_PATH="${LAUNCH_TEST_DIR}/GeneratedTest"
 ARTIFACTS_DIR="${LAUNCH_TEST_DIR}/Artifacts"
 SOLUTION="${OUTPUT_PATH}/AppCenter.UITest.Android.sln"
