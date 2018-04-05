@@ -29,12 +29,12 @@ fi
 echo " (i) Provided app path: ${app_path}"
 echo " (i) Provided app center app: ${app_center_app}"
 echo " (i) Provided app center token: 4cf23d2f1d9c268284ace5a1cc8bd374f4271b64"
-echo
+echo "${BITRISE_SOURCE_DIR}"
 
 # ---------------------
 # --- Main
 
-LAUNCH_TEST_DIR="${BITRISE_SOURCE_DIR}/app-center-launch-test-android"
+LAUNCH_TEST_DIR="${ANDROID_PROJECT_FOLDER}/../Petco.UITests"
 OUTPUT_PATH="${LAUNCH_TEST_DIR}/GeneratedTest"
 ARTIFACTS_DIR="${LAUNCH_TEST_DIR}/Artifacts"
 SOLUTION="${OUTPUT_PATH}/Petco.UITests.sln"
