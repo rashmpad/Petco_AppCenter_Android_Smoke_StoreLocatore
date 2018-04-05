@@ -29,7 +29,7 @@ fi
 echo " (i) Provided app path: ${app_path}"
 echo " (i) Provided app center app: ${app_center_app}"
 echo " (i) Provided app center token: 4cf23d2f1d9c268284ace5a1cc8bd374f4271b64"
-echo "${BITRISE_SOURCE_DIR}"
+echo "${ANDROID_PROJECT_FOLDER}"
 
 # ---------------------
 # --- Main
