@@ -34,7 +34,7 @@ echo "${ANDROID_PROJECT_FOLDER}"
 # ---------------------
 # --- Main
 
-LAUNCH_TEST_DIR="${ANDROID_PROJECT_FOLDER}/../Petco.UITests"
+LAUNCH_TEST_DIR="${ANDROID_PROJECT_FOLDER}/../Petco.UITests123"
 OUTPUT_PATH="${LAUNCH_TEST_DIR}/GeneratedTest"
 ARTIFACTS_DIR="${LAUNCH_TEST_DIR}/Artifacts"
 SOLUTION="${LAUNCH_TEST_DIR}/Petco.UITests.sln"
