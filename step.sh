@@ -34,7 +34,7 @@ echo "${ANDROID_PROJECT_FOLDER}"
 # ---------------------
 # --- Main
 
-LAUNCH_TEST_DIR="${ANDROID_PROJECT_FOLDER}/../Petco.UITests123"
+LAUNCH_TEST_DIR="${ANDROID_PROJECT_FOLDER}/../Petco.UITests.AppCenterAndroid"
 OUTPUT_PATH="${LAUNCH_TEST_DIR}/GeneratedTest"
 ARTIFACTS_DIR="${LAUNCH_TEST_DIR}/Artifacts"
 SOLUTION="${LAUNCH_TEST_DIR}/Petco.UITests.sln"
@@ -47,4 +47,4 @@ nuget restore -NonInteractive "${SOLUTION}"
 msbuild "${SOLUTION}" /p:Configuration=Release
 
 appcenter test prepare uitest --artifacts-dir "${ARTIFACTS_DIR}" --app-path "${app_path}" --build-dir "${BUILD_DIR}" --debug --quiet
-appcenter test run uitest --app "${app_center_app}" --devices 6f2c8184 --app-path "${app_path}" --async --fixture Petco.UITests.Cart\(Android\).VerifyCartFlowSecureCheckOutForgotPasswordwithOutRepeatDelivery --test-series "master" --locale "en_US" --token "${app_center_token}" --build-dir "${BUILD_DIR}"
+appcenter test run uitest --app "${app_center_app}" --devices 6f2c8184 --app-path "${app_path}" --async --fixture Petco.UITests.Cart\(Android\).VerifyCartFlowSecureCheckOutForgotPasswordwithOutRepeatDelivery --test-series "master" --locale "en_US" --token "${app_center_token}" --build-dir "${ANDROID_PROJECT_FOLDER}/../Petco.UITests/bin/Release"
