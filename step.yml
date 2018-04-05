@@ -1,4 +1,4 @@
-title: |-
+BITRISE_SIGNED_APK_PATHtitle: |-
   App Center Launch Test Android
 summary: |
   Run App Center launch test for android
@@ -33,7 +33,7 @@ toolkit:
   bash:
     entry_file: step.sh
 inputs:
-  - app_path: "$BITRISE_APK_PATH"
+  - app_path: "$BITRISE_SIGNED_APK_PATH"
     opts:
       title: "App path"
       summary: ""
