@@ -34,7 +34,7 @@ echo
 # ---------------------
 # --- Main
 
-LAUNCH_TEST_DIR="${BITRISE_PROJECT_PATH}"
+LAUNCH_TEST_DIR="${BITRISE_SOURCE_DIR}/app-center-launch-test-android"
 OUTPUT_PATH="${LAUNCH_TEST_DIR}/GeneratedTest"
 ARTIFACTS_DIR="${LAUNCH_TEST_DIR}/Artifacts"
 SOLUTION="${OUTPUT_PATH}/Petco.UITests.sln"
