@@ -34,15 +34,15 @@ echo "${ANDROID_PROJECT_FOLDER}"
 # ---------------------
 # --- Main
 
-LAUNCH_TEST_DIR="${ANDROID_PROJECT_FOLDER}/../Petco.UITests.AppCenterAndroid"
+LAUNCH_TEST_DIR="${BITRISE_SOURCE_DIR}/app-center-launch-test-android"
 OUTPUT_PATH="${LAUNCH_TEST_DIR}/GeneratedTest"
 ARTIFACTS_DIR="${LAUNCH_TEST_DIR}/Artifacts"
-SOLUTION="${LAUNCH_TEST_DIR}/Petco.UITests.sln"
-BUILD_DIR="${LAUNCH_TEST_DIR}/bin/Release"
+SOLUTION="${OUTPUT_PATH}/AppCenter.UITest.Android.sln"
+BUILD_DIR="${OUTPUT_PATH}/AppCenter.UITest.Android/bin/Release"
 MANIFEST_PATH="${ARTIFACTS_DIR}/manifest.json"
 
 npm install appcenter-cli@1.0.8 -g
-appcenter test generate uitest --platform android --output-path "${LAUNCH_TEST_DIR}"
+appcenter test generate uitest --platform android --output-path "${OUTPUT_PATH}"
 nuget restore -NonInteractive "${SOLUTION}"
 msbuild "${SOLUTION}" /p:Configuration=Release
 
