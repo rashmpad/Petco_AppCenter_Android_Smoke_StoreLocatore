@@ -33,7 +33,14 @@ echo "${ANDROID_PROJECT_FOLDER}"
 
 # ---------------------
 # --- Main
+
+SOLUTION="Petco.UITests.sln"
+
 npm install appcenter-cli@1.0.8 -g
+nuget restore -NonInteractive "${SOLUTION}"
+msbuild "${SOLUTION}" /p:Configuration=Release
+
+
 appcenter test run uitest --app "${app_center_app}" --devices 6f2c8184 --app-path "${app_path}" --async --fixture Petco.UITests.Cart\(Android\).VerifyCartFlowSecureCheckOutForgotPasswordwithOutRepeatDelivery --test-series "master" --locale "en_US" --token "${app_center_token}" --build-dir "Petco.UITests/bin/Release"
 
 
