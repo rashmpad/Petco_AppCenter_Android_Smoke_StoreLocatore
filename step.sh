@@ -39,8 +39,8 @@ echo "${ANDROID_PROJECT_FOLDER}"
 #SOLUTION="${OUTPUT_PATH}/AppCenter.UITest.Android.sln"
 
 
-ARTIFACTS_DIR="/Artifacts"
-BUILD_DIR="/Petco.UITests/bin/Release"
+ARTIFACTS_DIR="Artifacts"
+BUILD_DIR="Petco.UITests/bin/Release"
 MANIFEST_PATH="${ARTIFACTS_DIR}/manifest.json"
 
 
