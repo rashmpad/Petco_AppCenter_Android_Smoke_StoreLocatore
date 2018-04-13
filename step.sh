@@ -55,9 +55,6 @@ msbuild "Petco.UITests/Petco.UITests.csproj" /p:Configuration=Release
 #msbuild "${SOLUTION}" /p:Configuration=Release
 
 appcenter test prepare uitest --artifacts-dir "${ARTIFACTS_DIR}" --app-path "${app_path}" --build-dir "${BUILD_DIR}" --fixture "Petco.UITests.SmokeTest(Android)" --fixture "Petco.UITests.Cart(Android)" --fixture "Petco.UITests.Checkout(Android)" --fixture "Petco.UITests.Onboarding_CreateAccount(Android)" --fixture "Petco.UITests.Onboarding_IntroScreen(Android)" --fixture "Petco.UITests.Onboarding_Login(Android)" --fixture "Petco.UITests.RepeatDelivery(Android)" --fixture "Petco.UITests.Shop_ProductDetail(Android)" --fixture "Petco.UITests.Shop_ProductListing(Android)" --fixture "Petco.UITests.Shop_Search(Android)" --fixture "Petco.UITests.Shop_ShopLanding(Android)" --fixture "Petco.UITests.TheStoreLocator(Android)" --debug --quiet
-
-
-
 appcenter test run manifest --manifest-path "${MANIFEST_PATH}" --app "${app_center_app}" --devices 6f2c8184 --test-series "master" --locale "en_US" --debug --quiet --token "${app_center_token}"
 
 
