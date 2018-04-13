@@ -53,7 +53,12 @@ msbuild "Petco.UITests/Petco.UITests.csproj" /p:Configuration=Release
 #appcenter test generate uitest --platform android --output-path "${OUTPUT_PATH}"
 #nuget restore -NonInteractive "${SOLUTION}"
 #msbuild "${SOLUTION}" /p:Configuration=Release
-appcenter test prepare uitest --artifacts-dir "${ARTIFACTS_DIR}" --app-path "${app_path}" --build-dir "${BUILD_DIR}" --fixture "Petco.UITests.AM_ProfileLanding(Android).VerifyProfileLanding" --fixture "Petco.UITests.Cart(Android).VerifyCartFlowSecureCheckOutForgotPasswordwithOutRepeatDelivery" --debug --quiet
+appcenter test prepare uitest --artifacts-dir "${ARTIFACTS_DIR}" --app-path "${app_path}" --build-dir "${BUILD_DIR}" --fixture "Petco.UITests.AM_ProfileLanding(Android).VerifyProfileLanding" --fixture "Petco.UITests.Cart(Android)" --debug --quiet
+
+
+
+
+
 appcenter test run manifest --manifest-path "${MANIFEST_PATH}" --app "${app_center_app}" --devices 6f2c8184 --test-series "master" --locale "en_US" --debug --quiet --token "${app_center_token}"
 
 
