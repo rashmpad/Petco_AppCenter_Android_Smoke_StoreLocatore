@@ -28,7 +28,7 @@ fi
 
 echo " (i) Provided app path: ${app_path}"
 echo " (i) Provided app center app: ${app_center_app}"
-echo " (i) Provided app center token: 93424d4f2ed8ba4ba8492a7c7299366eee09a2a9"
+echo " (i) Provided app center token: 4cf23d2f1d9c268284ace5a1cc8bd374f4271b64"
 echo "${ANDROID_PROJECT_FOLDER}"
 
 # ---------------------
@@ -56,6 +56,4 @@ msbuild "Petco.UITests/Petco.UITests.csproj" /p:Configuration=Release
 
 appcenter test prepare uitest --artifacts-dir "${ARTIFACTS_DIR}" --app-path "${app_path}" --build-dir "${BUILD_DIR}" --fixture "Petco.UITests.SmokeTest(Android)" --fixture "Petco.UITests.Cart(Android)" --fixture "Petco.UITests.Checkout(Android)" --fixture "Petco.UITests.Onboarding_CreateAccount(Android)" --fixture "Petco.UITests.Onboarding_IntroScreen(Android)" --fixture "Petco.UITests.Onboarding_Login(Android)" --fixture "Petco.UITests.RepeatDelivery(Android)" --fixture "Petco.UITests.Shop_ProductDetail(Android)" --fixture "Petco.UITests.Shop_ProductListing(Android)" --fixture "Petco.UITests.Shop_Search(Android)" --fixture "Petco.UITests.Shop_ShopLanding(Android)" --fixture "Petco.UITests.TheStoreLocator(Android)" --debug --quiet
 appcenter test run manifest --manifest-path "${MANIFEST_PATH}" --app "${app_center_app}" --devices 6f2c8184 --test-series "master" --locale "en_US" --debug --quiet --token "${app_center_token}"
-
-
 
