@@ -54,7 +54,8 @@ msbuild "Petco.UITests/Petco.UITests.csproj" /p:Configuration=Release
 #nuget restore -NonInteractive "${SOLUTION}"
 #msbuild "${SOLUTION}" /p:Configuration=Releaseappcenter test prepare uitest --artifacts-dir "${ARTIFACTS_DIR}" --app-path "${app_path}" --build-dir "${BUILD_DIR}" --fixture "Petco.UITests.SmokeTest(Android)" --fixture "Petco.UITests.Cart(Android)" --debug --quiet
 
-appcenter test prepare uitest --artifacts-dir "${ARTIFACTS_DIR}" --app-path "${app_path}" --build-dir "${BUILD_DIR}" --fixture "Petco.UITests.SmokeTest(Android)" --fixture "Petco.UITests.Cart(Android)" --debug --quiet
-
+appcenter test prepare uitest --artifacts-dir "${ARTIFACTS_DIR}" --app-path "${app_path}" --build-dir "${BUILD_DIR}" --fixture "Petco.UITests.SmokeTest(Android)" --debug --quiet
 appcenter test run manifest --manifest-path "${MANIFEST_PATH}" --app "${app_center_app}" --devices 6f2c8184 --test-series "master" --locale "en_US" --debug --quiet --token "${app_center_token}"
 
+appcenter test prepare uitest --artifacts-dir "${ARTIFACTS_DIR}" --app-path "${app_path}" --build-dir "${BUILD_DIR}" --fixture "Petco.UITests.Cart(Android)" --debug --quiet
+appcenter test run manifest --manifest-path "${MANIFEST_PATH}" --app "${app_center_app}" --devices 6f2c8184 --test-series "master" --locale "en_US" --debug --quiet --token "${app_center_token}"
